@@ -1,0 +1,105 @@
+--Zadanie 1
+SELECT DISTINCT
+kategoria
+FROM gry;
+
+
+SELECT
+kategoria
+FROM gry
+GROUP BY kategoria;
+
+
+
+
+
+--Zadanie 2
+SELECT
+ocena AS "rozne oceny"
+FROM oceny
+GROUP BY ocena;
+
+
+SELECT DISTINCT
+ocena AS "rozne oceny"
+FROM oceny;
+
+
+
+
+
+
+--Zadanie 3
+SELECT
+nazwisko AS "unikalne_nazwiska"
+FROM gracze
+GROUP BY nazwisko;
+
+
+SELECT DISTINCT
+nazwisko AS "unikalne_nazwiska"
+FROM gracze;
+
+
+
+
+
+
+
+--Zadanie 4
+SELECT 
+imie, nazwisko
+FROM gracze
+GROUP BY imie, nazwisko;
+
+
+
+
+--Zadanie 5
+SELECT
+COUNT(kategoria)
+FROM gry
+GROUP BY kategoria;
+
+
+
+
+
+--Zadanie 6
+SELECT
+MIN(ocena) AS "min_ocena",
+ id_gry
+FROM oceny
+GROUP BY 
+id_gry
+ORDER BY id_gry;
+
+
+
+
+
+--Zadanie 7
+SELECT 
+COUNT(imie) AS "ilosc", imie
+FROM gracze
+GROUP BY imie
+ORDER BY COUNT(imie) DESC ;
+
+
+
+
+
+--Zadanie 8
+SELECT 
+ROUND(AVG(ocena), 2) AS "srednia ocen",
+stan
+FROM oceny
+GROUP BY stan
+ORDER BY ROUND(AVG(ocena), 2);
+
+
+
+
+
+
+
