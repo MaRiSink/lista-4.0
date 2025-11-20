@@ -102,4 +102,19 @@ ORDER BY ROUND(AVG(ocena), 2);
 
 
 
+--Zadanie 9
+SELECT 
+id_gry,
+stan ,
+ocena,
+COUNT(*) AS "unikalnych opinii"
+FROM oceny
+GROUP BY id_gry, stan, ocena
+ORDER BY COUNT(*)  DESC;
+
+
+
+
+
+
 
